@@ -605,4 +605,70 @@ def f(x):
 for A in range(1,100):
      if any(f(x)!=0 for x in range(1,100)):
           print(A)
+#File: ЕГЭ
+#03.02.2024 21:33 (2 2024)
+print('w x y z')
+for w in range(2):
+     for x in range(2):
+          for y in range(2):
+               for z in range(2):
+                    if ((x and (not y))or(x == z)or w) == 0:
+                         print(w,x,y,z)
+#12.03.2024 21:04 (6)
+from turtle import *
+tracer(0)
+left(90)
+k = 40
+for i in range(12):
+     forward(6*k)
+     right(120)
+pu()
+for x in range(-k,k):
+     for y in range(-k,k):
+          goto(x*k,y*k)
+          dot(5)
+done()
+#Ответ: 13
+#17.02.2024 23:06 (12)
+#шестеричная запись числа
+def c6(x): 
+     s = ''
+     while x>0:
+          s = str(x%6) + s 
+          x = x//6 
+     return s
 
+for n in range(1,100):
+     b = c6(n)
+     if n%3 == 0: #если число делится на 3
+          b = b + b[:2] # то к этой записи дописываются две первые шестеричные цифры
+     else: #иначе
+          b = b + c6(n%3*10) #остаток от деления на 3(n%3) умножается на 10(*10), переводится в шестеричную запись (с6) и дописывается в конец числа
+     r = int(b,6)
+     if r>680: #больше 680
+          print(n,r)
+#Ответ: 19 694
+#03.02.2024 18:09 (16 (2024))
+def f(n):
+     if n <= 3:
+          return n
+     elif 3 < n <= 32:
+          return n // 4 + f(n-3)
+     elif n > 32:
+          return 2*f(n-5)
+print(f(100))
+#03.02.2024 21:29 (16.1 (2024))
+def f(n):
+     if n <= 1:
+          return n
+     if n > 1 == 0 and n % 3 == 0:
+          return n + f(n//3-1)
+     if n > 1 == 0 and n % 3 != 0:
+          return n + f(n+3)
+     
+for x in range(1,10000):
+     try:
+          if f(x) > 1000:
+               print(x)
+     except:
+          ...
