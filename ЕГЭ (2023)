@@ -168,8 +168,73 @@ for x in alph:
 
 #26.12.2022 23:07 (355)
 
+alph = '0123456789abcde'
+for x in alph:
+    a1 = "131" + x + "1"
+    a2 = "13" + x + "3"
+    summ = int(a1,15) + int(a2,17)
+    if summ % 11 == 0:
+        maxx = summ // 11
+print(maxx)
+      
+#26.12.2022 23:14 (356)
 
-        
+alph = '0123456789abcde'
+alph1 = '0123456789abcdefg'
+Ymin = 17
+for x in alph:
+    for y in alph1:
+        a1 = "123" + x + "5"
+        a2 = "67" + y + "9"
+        summ = int(a1,15) + int(a2,17)
+        if summ % 131 == 0 and int(y,17)<Ymin:
+            maxx = summ // 131
+            Ymin = int(y,17)
+print(maxx)
+
+#26.12.2022 23:29 (357)     
+
+alph = "0123456789abc"
+alph1 = "123456789" 
+for i in range(12):
+    alph1 +=chr(ord("a")+i)
+
+XYmin = 34
+for x in alph1:
+    for y in alph:
+        a1 = x +"23" + x + "5"
+        a2 = "67" + y + "9" + y
+        minus = int(a1,22) - int(a2,13)
+        if  minus % 57 == 0 and (int(x,22) + int(y,13))<XYmin :
+            murp = minus // 57 
+            XYmin = int(x,22) + int(y,13)
+print(murp)      
+
+#26.12.2022 23:48 (358) 
+
+alph = "0123456789a"
+for x in alph:
+    for y in alph:
+        a1 = "7" + y + "23" + x + "5"
+        a2 = "67" + x + "9" + y
+        summ = int(a1,25) + int(a2,11)
+        if summ % 131 == 0:
+            maxx = summ // 131
+print(maxx)
+
+#26.12.2022 23:51 (359) 
+
+for A in range(2000):
+    for x in range(13):
+        for y in range(13):   
+            M= 2*15**5+y*15**4+2*15**3+3*15**2+x*15+5
+            N= 6*13**4+7*13**3+x*13**2+9*13+y
+            if (M+A)%N==0:
+                print(A)
+
+#14.01.2023 11:28 (360) 
+
+
     
 
 
