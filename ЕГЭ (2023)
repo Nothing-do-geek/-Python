@@ -15,3 +15,15 @@ for a in [0,1]:
                if (b == a <= c) == 0 and (b == a(c <= b)) == 0:
                    print(a,b,c,F)
 #08.11.2023 20:32 (2)
+
+print('x y w z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    if (((x<=y)or(not w == z))and((x<=y)==(w and (not z))))== 0:
+                         print(x,y,w,z)
+print('Ответ:') 
+
+#21.12.2023 22:29 (9357)
+
