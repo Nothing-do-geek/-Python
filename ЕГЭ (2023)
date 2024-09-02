@@ -70,3 +70,14 @@ for x in alph:
 
 #26.12.2022 21:28 (346)
 
+alph = '0123456789abcde'
+for x in alph:
+    f = int(f'9759{x}',17)+int(f'3{x}108',17)
+    if f % 11 == 0:
+        print(f//11)
+        break
+
+#26.12.2022 21:32 (347)
+    
+
+
