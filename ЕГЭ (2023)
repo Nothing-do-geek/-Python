@@ -79,5 +79,33 @@ for x in alph:
 
 #26.12.2022 21:32 (347)
     
+alph = '0123456789abcde'
+for x in alph:
+    f = int (f'9009{x}',18)+ int(f'2257{x}',18)
+    if f % 15 == 0:
+        print(f // 15)
+        break
+#26.12.2022 21:41 (348)
 
+alph = '0123456789abcde'
+for x in alph:
+    f = int(f'55{x}36',19)+int(f'{x}2724',19)
+    if f % 11 == 0:
+        print(f // 11)
+        break
+
+#26.12.2022 21:46 (349)
+
+for x in ['0','1','2','3','4','5','6','7','8','9']:
+    a = '3364' + x
+    b = x + '7946'
+    c = '55' + x + '87'
+ 
+    left = int(a, 11) + int(b, 12)
+    right = int(c, 14)
+    if left == right:
+        print(right)
+        break
+
+#26.12.2022 22:21 (350)
 
