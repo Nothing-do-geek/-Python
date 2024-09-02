@@ -408,6 +408,31 @@ for x in range(10):
         print((a+b) // 15)
 #14.01.2023 14:39 (380)
 
+#14.01.2023 16:07 (381)
+for x in range(28):
+    a = int(f'1{x}342',28) - 2*int(f'1{x}324')+7  
+    if a % 25 == 0:
+        print(a // 25)
+#14.01.2023 16:26 (382)
+for x in range(13):
+    a = 1*int(f'132{x}4') + 3
+    b = int(f'134{x}2',13) 
+    if (b-a) % 30 == 0:
+        print((b-a) // 30)
+#14.01.2023 16:28 (383)
+for x in range(22):
+    a = 2*int(f'1{x}324') + 3
+    b = int(f'134{x}2',22) 
+    if (b-a) % 50 == 31:
+        print((b-a) // 50)
+        break
+#14.01.2023 16:33 (384)
+for x in range(22):
+    a = 1*int(f'132{x}4') + 3
+    b = int(f'13{x}42',22) 
+    if (b-a) % 100 == 53:
+        print((b-a) // 100)
+        break
 
 
 
