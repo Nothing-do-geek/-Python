@@ -1,3 +1,4 @@
+#File: 1
 print('x y z w F')
 
 for x in [0,1]:
@@ -16,6 +17,7 @@ for a in [0,1]:
                    print(a,b,c,F)
 #08.11.2023 20:32 (2)
 
+#File: 2
 print('x y w z')
 for x in 0,1:
      for y in 0,1:
