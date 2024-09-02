@@ -27,3 +27,14 @@ print('Ответ:')
 
 #21.12.2023 22:29 (9357)
 
+print('x y w z')
+for x in 1,0:
+     for y in 1,0:
+          for w in 1,0:
+               for z in 1,0:
+                    if ( ((x<=y)or(z<=w)) and (not(x<=w)) ) == 0:
+                         print(x,y,w,z)
+print('Ответ: yxzw')
+
+#21.12.2023 23:14 (9910)
+
