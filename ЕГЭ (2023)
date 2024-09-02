@@ -109,3 +109,67 @@ for x in ['0','1','2','3','4','5','6','7','8','9']:
 
 #26.12.2022 22:21 (350)
 
+for x in ['0','1','2','3','4','5','6','7','8','9']:
+    a = x + '1418'
+    b = '1' + x + '037'
+    c = '2' + x + '209'
+
+    left = int(a, 13) + int(b, 14)
+    right = int(c, 19)
+    if left == right:
+        print(right)
+        break
+
+#26.12.2022 22:28 (351)
+
+for x in ['0','1','2','3','4','5','6','7','8','9']:
+    a = '19' + x + '61'
+    b = '3393' + x
+    c = '60' + x + '05'
+
+    left = int(a, 12) + int(b, 17)
+    right = int(c, 15)
+    if left == right:
+        print(right)
+        break
+
+#26.12.2022 22:33 (352)
+
+alph = "0123456789abcdefg"
+for x in alph:
+    a1 = "66" + x + "63"
+    a2 = "5" + x + "810" #f = int(f'66{x}63',17) - int(f'5{x}810',17)
+    summ = int(a1,17) - int(a2,17)
+    if summ % 11 == 0:
+        print(summ // 11)
+        break
+
+#26.12.2022 22:58 (353)
+
+alph = '0123456789abcde'
+for x in alph:
+    a1 = '82' + x + '19'
+    a2 = '6' + x + '073'
+    summ = int(a1,15) - int(a2, 15)
+    if summ % 11 == 0:
+        print(summ // 11)
+        break
+
+#26.12.2022 23:02 (354)
+
+alph = '0213456789abcde'
+for x in alph:
+    a1 = '8' + x + '121'
+    a2 = '7' + x + '575'
+    summ = int(a1, 13) - int(a2, 13)
+    if summ % 19 == 0:
+        print(summ // 19)
+        break
+
+#26.12.2022 23:07 (355)
+
+
+        
+    
+
+
