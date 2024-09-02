@@ -47,3 +47,16 @@ print(bin(32)[2:])
 print(bin(160)[2:])
 
 #16.11.2023 18:47 (13IP)
+
+#File: x
+def f(n):
+    if n==1:
+        return 1
+    elif n%2==0:
+        return n+f(n-1)
+    else:
+        return 2*f(n-2)
+ 
+print(f(26))
+
+#09.09.2023 19:34 (321)
