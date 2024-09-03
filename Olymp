@@ -1,0 +1,5 @@
+#File: Olymp
+#Olymp (10.12.2022 21:44)
+n = int(input())
+k = int(input())
+print(2 * n *(n // k - 1))
