@@ -3,3 +3,44 @@
 n = int(input())
 k = int(input())
 print(2 * n *(n // k - 1))
+
+#Olymp1 (10.12.2022 22:14)
+a = int(input())
+b = int(input())
+c = int(input())
+
+d1 = b - a
+d2 = c - b
+
+if d1 == d2:
+    print(c + d1, 4)
+elif d1 == 2 * d2:
+    print((a + b) // 2, 2)
+else:
+    print((b + c) // 2, 3)
+
+#Olymp2 (10.12.2022 22:35)
+
+n = int (input())
+a = int (input())
+b = int (input())
+ans = 0
+for i in range(1, n + 1):
+    if i%a == 0 or i% b == 0:
+        ans += 1
+print(ans)
+
+
+def gcd(n, m):
+    if m == 0:
+        return n
+    return gcd(m, n % m)
+
+n = int (input())
+a = int (input())
+b = int (input())
+ans = n // a + n // b - n // (a * b // gcd(a, b))
+print(ans)
+
+
+
