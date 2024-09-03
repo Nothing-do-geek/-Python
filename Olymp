@@ -42,5 +42,35 @@ b = int (input())
 ans = n // a + n // b - n // (a * b // gcd(a, b))
 print(ans)
 
+#Olypm1 (10.12.2022 22:09)
+
+y = int(input())
+r = int(input())
+b = int(input())
+while b >= 10:
+    b -= 10
+    r += 1
+while r >= 10:
+    r -= 10
+    y += 1
+    ans = 0
+while y >= 10:
+    y -= 10
+    ans += 1
+ans = (( b // 10 + r) // 10 + y) // 10
+print(ans)
+
+#Olypm2 (10.12.2022 22:51)
+
+n = int(input())
+a = [int(input()) for i in range(n)]
+
+ans = -1
+for elem in a:
+    if a.count(elem) == 1:
+        if ans == -1 or elem < ans:
+            ans = elem
+print(ans)
+
 
 
