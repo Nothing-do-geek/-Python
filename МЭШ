@@ -1,0 +1,9 @@
+#File: 1 (17.11.2022 19:47)
+a = int(input())
+b = int(input())
+print(a + b)
+#File: 2 (17.11.2022 19:49)
+a = int(input())
+b = int(input())
+c = a + b
+print(c)
