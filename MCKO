@@ -1,4 +1,4 @@
-#MCKO 11 (19) (06.04.2023 22:35)
+#МЦКО 11 (19) (06.04.2023 22:35)
 for c in range(0, 1000):
     x = c
     a = 0
@@ -13,7 +13,7 @@ for c in range(0, 1000):
     if a == 3 and b == 2:
         print(x)
         break
-#MCKO 11 (20) (06.04.2023 22:23)
+#МЦКО 11 (20) (06.04.2023 22:23)
 for i in range(200, 10000):
     x = i
     L = 2*x - 20
@@ -26,7 +26,7 @@ for i in range(200, 10000):
     if M == 50:
         print(i)
         break
-#MCKO 11 (23) (06.04.2023 23:56)
+#МЦКО 11 (23) (06.04.2023 23:56)
 for k in range(1, 1000):
     x = k
     a = 0
@@ -44,3 +44,113 @@ for k in range(1, 1000):
     if a == 3 and b == 2:
         print(k)
         break
+#МЦКО 11 (25) (06.04.2023 23:57)
+for k in range(1, 1000):
+    x = k
+    b = 0
+    i = 0
+    while x > 0:
+        if i % 2 > 0:
+            b = b + x % 10
+        x = x // 10
+        i = i + 1
+    if i == 4 and b == 5:
+        print(k)
+        break
+#МЦКО 11 (26) (06.04.2023 23:10)
+for c in range(0, 1000):
+    x = c
+    a = 0
+    b = 0
+    while x > 0:
+        c = x % 2
+        if c == 0:
+            a = a + 1
+        else:
+            b = b + 1
+        x = x // 8
+    if a == 3 and b == 2:
+        print(c)
+        break
+#МЦКО 11 (27) (06.04.2023 23:41)
+for a in range(1, 1000):
+    x = a
+    b = 0
+    i = 0
+    while x > 0:
+        if i % 2 > 0:
+            b = b + x % 10 
+            x //= 10
+            i = i + 1
+    if b == 4 and i == 5:
+        print(a)
+        break
+#МЦКО 11 (29) (06.04.2023 23:35)
+for k in range(0, 1000):
+    x = k
+    b = 0
+    i = 0
+    while x > 0:
+        if i % 2 > 0:
+            b = b + x % 10
+        x = x // 10
+        i = i + 1
+    if i == 4 and b == 5:
+        print(k)
+        break
+#МЦКО 11 (34) (06.04.2023 22:52)
+for i in range(1, 10000): 
+    x = i
+    S = x
+    R = 0
+    while x > 0:
+        d = x % 2
+        R = 10 * R + d
+        x = x // 2
+    S = R + S
+    S = str(S)
+    if len(S) == 4:
+        print(i)
+        break
+#МЦКО 11 (06.04.2023 21:36)
+for i in range(100, 1000):
+    x = i
+    L = x - 16
+    M = x + 32
+    while L != M:
+        if L > M:
+            L = L - M
+        else:
+            M = M - L
+    if M == 4:
+        print(i)
+        break
+#РНО по МЦКО (12.05.2023 15:54)
+print('-' * 10)
+print("x", "y", "z", "w")
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            for w in range(2):
+                F = ((y <= w) and (x <= w) and (x <= z))
+                if not F:
+                    print(x, y, z, w)
+print('-' * 10)
+for x in range (1000):
+  s=x
+  n=600
+  while s>0:
+    n=n//3
+    s=s//6    
+  if n==22:
+      print (n, x)
+      break
+print('-' * 10)
+for a in range (1,1000):
+    if all(((x%a!=0 and x%14==0)<= (x%26!=0))==True for x in range (1,10000)):
+        print (a)
+print('-' * 10)
+
+
+
+
