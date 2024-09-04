@@ -26,3 +26,21 @@ for i in range(200, 10000):
     if M == 50:
         print(i)
         break
+#MCKO 11 (23) (06.04.2023 23:56)
+for k in range(1, 1000):
+    x = k
+    a = 0
+    b = 0
+    i = 0
+    c = 0
+    while x > 0:
+        i = i + 1
+        if i % 2 == 0:
+            a = a + c
+        else:
+            b = b + c
+        c = x % 10
+        x = x // 10
+    if a == 3 and b == 2:
+        print(k)
+        break
