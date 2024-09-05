@@ -702,6 +702,100 @@ for w in 0,1:
                for z in 0,1:
                     if (not (y and not(x))and not(x == z)and w) == 0:
                          print(w,x,y,z)
+#08.04.2024 12:39 (2 домашка)
+x = (9**11)+(3**242) - 27
+s = ''
+while x != 0: 
+    s += str(x % 3)
+    x //= 3
+s = s[::-1]
+print(s.count("2"))
+#03.01.2024 21:20 (2.1 (2024))
+print('w x y z')
+for w in 0,1:
+     for x in 0,1:
+          for y in 0,1:
+               for z in 0,1:
+                    if (y and (x or z)or(not(y or z))or w) == 0:
+                         print(w,x,y,z)
+#02.01.2024 17:43 (2.2 (2024))
+print ('x y w z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    if ((y <= w)==(x <= (not z))and(x or w)) == False:
+                         print(x,y,w,z)
+#02.01.2024 17:49 (2.3 (2024))
+print ('x y w z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    if ((x and (not y))or(w <= z)==(z == x)) == False:
+                         print(x,y,w,z)
+#04.01.2024 19:13 (2.34 (2024))
+print('x1 y1 w1 z1')
+for x1 in 0,1:
+     for y1 in 0,1:
+          for w1 in 0,1:
+               for z1 in 0,1:
+                    if ((x1 <= y1)==(w1 or not(z1))) == 0:
+                         print(x1, y1, w1, z1)
+
+print('x2 y2 w2 z2')
+for x2 in 0,1:
+     for y2 in 0,1:
+          for w2 in 0,1:
+               for z2 in 0,1:
+                    if ((x2 <= y2)and(not(w2) == z2)) == 0:
+                         print(x2, y2, w2, z2)
+#06.01.2024 12:55 (2.9733 (2024))
+print('w x y z')
+for w in 0,1:
+     for x in 0,1:
+          for y in 0,1:
+               for z in 0,1:
+                    if ((x and not(y))or(x == z)or w)== 0:
+                         print(w,x,y,z)
+#03.01.2024 14:32 (2.main (2024))
+print('w x y z')
+for w in 0,1:
+     for x in 0,1:
+          for y in 0,1:
+               for z in 0,1:
+                    if (not((w or not(y))and x)or(y == z)) == 0:
+                         print(w,x,y,z)
+#02.01.2024 17:28 (2abcd (2024))
+print('a b c d')
+for a in 0,1:
+     for b in 0,1:
+          for c in 0,1:
+               for d in 0,1:
+                    if (((not a)and(not b))or(b == c)or d) == 0:
+                         print(a,b,c,d)
+#11.12.2023 21:54 (2unknown)
+#file = open()
+with open() as file:
+
+    line = file.readline()
+    print(line[1])
+
+
+file.close()
+#08.04.2023 12:44 (3 домашка)
+x = 32**1023 + 16**1024 - 3
+s = ''
+while x != 0:
+    s += str(x % 2) 
+    x //= 2
+s = s[::-1]
+print(s.count("1"))
+
+
+                         
+
+
 
                          
 
