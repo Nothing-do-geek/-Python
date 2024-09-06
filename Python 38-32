@@ -1,0 +1,28 @@
+#20.04.2024 15:32 (2(20.04.2024))
+print('x,y,z,w')
+for w in 0,1:
+     for x in 0,1:
+          for y in 0,1:
+               for z in 0,1:
+                    f = (not(w <= x)) or ((not z) <= (not y)) or z
+                    if f == 0:
+                         print(x,y,z,w)
+#12.03.2024 14:07 (2(lvl2))
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    if ((x<=y)and(y<=w)or(z==(x or y)))==0:
+                         print(x,y,w,z)
+#12.03.2024 14:17 (2(lvl2.1))
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    if ((w and y)or((x<=w)==(y<=z)))==0:
+                         print(x,y,w,z)
+#12.03.2024 15:32 (2(lvl2.2))
+                         
+
