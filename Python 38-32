@@ -204,6 +204,45 @@ for a in '12345678':
                              r.count('75') == 0:
                               count += 1
 print(count)
+#23.04.2024 20:10 (8.9)
+import itertools
+alphabet = "ВЕРЕТЕНО"
+ar = itertools.product(alphabet, repeat=6) #Размещение с повторением
+arl = []
+for i in ar:
+    arl.append(list(i))
+count = 0
+for e in arl:
+    if e[0] != "В":
+        count += 1
+print(count)
+#26.02.2024 22:54 (12)
+s = '>' + '1'*25 + '2'*17 + '3'*10
+
+while '>1' in s or '>2' in s or '>3' in s:
+     if '>1' in s:
+          s = s.replace('>1','22>3',1)
+     if '>2' in s:
+          s = s.replace('>2','2>',1)
+     if '>3' in s:
+          s = s.replace('>3','11>2',1)
+print(s.count('1')*1+s.count('2')*2+s.count('3')*3)
+#29.04.2024 22:54 (14 (NEW))
+x = 4 * 3125**2019 + 3 * 625**2020 - 2 * 125**2021 + 25**2022 - 4 * 5**2023 - 2024
+a = []
+
+while x > 0:
+     a = a + [x%25]
+     x //= 25
+print(a.count(10))
+     
+
+          
+
+
+          
+ 
+
           
 
           
