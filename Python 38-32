@@ -1245,6 +1245,160 @@ for a in 0,1:
                     if f == 0:
                          print(a,b,c,d)
 """
+#22.06.2024 17:19 (22062024)
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    f = (y <= x) or (not((x <= z) and (z <= x))) and (not w)
+                    if f == 0:
+                         print(x,y,w,z)
+#23.06.2024 12:19 (23062024)
+"""
+def f(n):
+  if n < 10:
+    return n
+  if n >= 10:
+    return f(n % 10) + f(n // 10)
+k = 0
+for n in range(1, 2**63):
+  if f(n) == 159:
+    k += 1
+print(k)
+"""
+"""
+lst = []
+for n in range(1,1500):
+  b = bin(n) [2:]
+  b = b + '0' if n % 2 == 0 else b + '1'
+  b = b + '0' if b.count('1') % 2 == 0 else b + '1'
+  r = int(b,2)
+  if r > 2023:
+    lst.append(r)
+print(min(lst))
+"""
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 50
+
+for k in range(14):
+     t.left(180)
+     for k in range(3):
+          t.forward(3 * scale)
+          t.right(90)
+t.up()
+for x in range(-50,70):
+     for y in range(-50,70):
+          t.goto(x * scale, y * scale)
+          t.dot(4, "orange")
+t.done()
+"""
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 75
+
+for k in range(5):
+     t.forward(8 * scale)
+     t.right(120)
+     for k in range(2):
+          t.forward(4 * scale)
+          t.right(60)
+     t.forward(4 * scale)
+     t.right(120)
+t.up()
+for x in range(-50,70):
+     for y in range(-50,70):
+          t.goto(x * scale, y * scale)
+          t.dot(4, "orange")
+t.done()
+"""
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 10
+
+for k in range(100):
+     t.forward(10 * scale)
+     t.right(30)
+t.up()
+for x in range(-50,70):
+     for y in range(-50,70):
+          t.goto(x * scale, y * scale)
+          t.dot(3, "orange")
+t.done()
+"""
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 10
+
+for k in range(100):
+     t.forward(10 * scale)
+     t.right(180)
+     t.forward(10 * scale)
+     t.right(190)
+t.up()
+for x in range(-50,70):
+     for y in range(-50,70):
+          t.goto(x * scale, y * scale)
+          t.dot(3, "orange")
+t.done()
+"""
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 15
+
+for k in range(10):
+     t.right(90)
+     for k in range(3):
+          t.forward(10 * scale)
+          t.right(90)
+          t.forward(10 * scale)
+          t.right(270)
+t.up()
+for x in range(-50,70):
+     for y in range(-80,70):
+          t.goto(x * scale, y * scale)
+          t.dot(3, "orange")
+t.done()
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 30
+
+for k in range(151):
+     t.forward(10 * scale)
+     t.right(300)
+     t.forward(20 * scale)
+     t.right(300)
+t.up()
+for x in range(-50,70):
+     for y in range(-80,70):
+          t.goto(x * scale, y * scale)
+          t.dot(3, "orange")
+t.done()
 
 
      
