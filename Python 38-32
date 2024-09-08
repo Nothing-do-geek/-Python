@@ -1823,6 +1823,28 @@ while '21' in s or '31' in s or '23' in s:
           s = s.replace('23','32',1)
 print(s[9] + s[89] + s[129])
 """
+#11.06.2024 19:44 (Forthevideo)
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+t.speed(300)
+scale = 50
+
+t.left(60)
+for k in range(8):
+     t.forward(6 * scale)
+     t.left(60)
+     t.forward(6 * scale)
+     t.left(120)
+t.up()
+
+for x in range(-20,50):
+     for y in range(-10,40):
+          t.goto(x * scale, y * scale)
+          t.dot(3)
+t.done()
 
 
           
