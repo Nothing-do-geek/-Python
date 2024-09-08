@@ -474,6 +474,293 @@ for x in '0123456789ABCDE':
      if f % 14 == 0:
           print(f//14)
           break
+#01.07.2024 10:12 (01072024)
+"""
+Номер 2
+"""
+"""
+print('x,y,z')
+for x in 0,1:
+     for y in 0,1:
+          for z in 0,1:
+               f = ((not (x)) and y and z) or ((not (x)) and (not (z)))
+               if f == 1:
+                    print(x,y,z)
+"""
+
+"""
+Номер 5
+"""
+"""
+lst = []
+for n in range(1,10000):
+     b = bin(n) [2:]
+     if b.count('1') % 2 == 0:
+          b = b + '1'
+     else:
+          b = b + '0'
+     if int(b,2) % 2 == 0:
+          b = b + '10'
+     else:
+          b = b + '01'
+     r = int(b, 2)
+     if r < 1000:
+          print(n,r)
+
+"""
+"""
+Номер 8
+"""
+
+"""
+from itertools import product
+
+k = 0
+
+for i in product(sorted('ЛЕМУР'),repeat=4):
+     s = ''.join(i)
+     if 'Л' in s[0]:
+          k += 1
+print(k)
+"""
+
+"""
+Номер 14
+"""
+
+"""
+for x in '0123456789ABCDF':
+     a = (f'97968{x}13', 15)
+     b = (f'7{x}213', 15)
+     c = a + b
+     if c % 14 == 0:
+          print(c // 14)
+"""
+
+"""
+Номер 16
+"""
+
+"""
+
+def f(n):
+     if n > 100000:
+          return n
+     if n <= 100000:
+          return f(n+1) + 5*n + 2
+print(f(3)-f(7))
+"""
+
+"""
+Номер 23
+"""
+
+"""
+def f(x,y):
+     if x > y:
+          return 0
+     if x == y:
+          return 1
+     return f(x+1,y) + f(x+3,y) + f(x*3,y)
+print(f(3,9)*f(9,27)*f(27,31))
+"""
+
+"""
+Номер 25
+"""
+
+"""
+from fnmatch import *
+
+k = 0
+
+for i in range(27, 10**8, 27):
+     if fnmatch (str(i), '123*890'):
+          print(i, i//27)
+"""
+#02.07.2024 16:24 (02072024)
+"""
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    f = (not(y <= (x == w))) and (z <= x)
+                    if f == 1:
+                         print(x,y,w,z)
+"""
+"""
+for n in range(1,1000):
+     b = bin(n) [2:]
+     if n % 2 != 0:
+          b = b + '0'
+     else:
+          b = '1' + b
+     if b.count('1') % 2 == 0:
+          b = b + '1'
+     else:
+          b = b + '0'
+     r = int(b,2)
+     if r > 228:
+          print(n)
+          break
+
+"""
+
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 15
+
+for k in range(23):
+     t.forward(50 * scale)
+     t.right(90)
+t.up()
+t.forward(10 * scale)
+t.right(90)
+t.forward(20 * scale)
+t.down()
+for k in range(34):
+     t.forward(40 * scale)
+     t.left(90)
+t.up()
+
+for x in range(-50,70):
+     for y in range(-50,70):
+          t.goto(x * scale, y * scale)
+          t.dot(3, "orange")
+t.done()
+"""
+"""
+from itertools import permutations
+
+for i in permutations('01234567',r=5):
+     s = ''.join(i)
+     if s.count('6') == 1 and '1' not in s[6] and '3' not in s[6] and '5' not in s[6] and '7' not in s[6]:
+          print(i)
+"""
+"""
+for n in range(4,10000):
+     s = '5' + '2' * n
+     while '52' in s or '2222' in s or '1122' in s:
+          if '52' in s:
+               s = s.replace('52','11',1)
+          if '2222' in s:
+               s = s.replace('2222','5',1)
+          if '1122' in s:
+               s = s.replace('1122','25',1)
+     su = sum(map(int, s))
+     if su == 64:
+          print(n)
+"""
+
+"""
+print(f'{130:08b}',f'{140:08b}',f'{241:08b}',f'{137:08b}')
+print(f'{130:08b}',f'{140:08b}',f'{240:08b}',f'{0:08b}')
+a = '10000010 10001100 11110000 00000000'
+print(a.count('1'))
+"""
+
+"""
+a = 6 * 343**1156 - 5*49**1147 + 4*7**1153 - 875
+k = []
+while a > 0:
+     k.append(a % 7)
+     a //= 7
+print(sum(k))
+"""
+
+"""
+for x in range(1,52):
+     return ((x % 34 == 0) and (not(x % 51 == 0))) <= (x % A
+"""
+"""
+def f(n):
+     if n >= 2020:
+          return n
+     if n < 2020:
+          return n + 2 + f(n + 3)
+print(f(2012)-f(2023))
+"""
+"""
+def f(x,y,step=0):
+     if (x+y) >= 75 and step == 2:
+          return True
+     if (x+y) < 75 and step < 2:
+          return f(x+3,y,step+1) or f(x*2,y,step+1) or f(x,y+3,step+1) or f(x,y*2,step+1)
+     else:
+          return False
+
+for s in range(1,64):
+     if f(10,s):
+          print(s)
+          break
+"""
+"""
+def f(x,y,step=0):
+     if (x+y) >= 75 and step == 3:
+          return True
+     if (x+y) < 75 and step < 3:
+          if step % 2 == 0:
+               return f(x+3,y,step+1) or f(x*2,y,step+1) or f(x,y+3,step+1) or f(x,y*2,step+1)
+          else:
+               return f(x+3,y,step+1) and f(x*2,y,step+1) and f(x,y+3,step+1) and f(x,y*2,step+1)
+     else:
+          return False
+
+for s in range(1,64):
+     if f(10,s):
+          print(s)
+"""
+"""
+def f(x,y,step=0):
+     if (x+y) >= 75 and step in {2,4}:
+          return True
+     if (x+y) < 75 and step < 4:
+          if step % 2 != 0:
+               return f(x+3,y,step+1) or f(x*2,y,step+1) or f(x,y+3,step+1) or f(x,y*2,step+1)
+          else:
+               return f(x+3,y,step+1) and f(x*2,y,step+1) and f(x,y+3,step+1) and f(x,y*2,step+1)
+     else:
+          return False
+
+for s in range(1,64):
+     if f(10,s):
+          print(s)
+          break
+"""
+"""
+def f(x,y):
+     if x > y or x == 20:
+          return 0
+     if x == y:
+          return 1
+     return f(x+1,y) + f(x*2,y)
+print(f(1,10)*f(10,40))
+"""
+
+"""
+from fnmatch import *
+
+for i in range(151, 10**9, 151):
+     if fnmatch(str(i), '2?34?56?8'):
+          print(i, i//151)
+"""
+
+"""
+from ipaddress import *
+ip = ip_address('130.140.241.137')
+net = ip_address('130.140.240.0')
+for mask in range(33):
+   network = ip_network(f'{ip}/{mask}', 0)
+   if network.network_address == net:
+       print(mask)
+"""
+
+
      
 
 
