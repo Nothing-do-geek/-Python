@@ -2096,6 +2096,75 @@ def f(n):
           return f(n-1)+n-2
 print(f(2024)-f(2020))
 """
+#04.06.2024 0:16 (XTM12)
+s = '2' * 52
+while '222' in s or '000' in s:
+     if '000' in s:
+          s = s.replace('000','2',1)
+     else:
+          s = s.replace('222','02',1)
+print(s)
+#23.04.2024 21:51 (Yandex)
+#print('nkml')
+#for n in 0,1:
+     #for k in 0,1:
+          #for m in 0,1:
+              # for l in 0,1:
+                   # f = (not n) or k and (not m) or (l == m)
+                    #if f == 0:
+                        # print(n,k,m,l)
+s = '7' * 47
+while '2222' in s or '7777' in s:
+     if '2222' in s:
+          s = s.replace('2222','77',1)
+     else:
+          s = s.replace('7777','22',1)
+print(s)
+#24.04.2024 21:11 (Баллы)
+while True:
+    s = int(input('Сколько первичных баллов ты планируешь набрать? \n'))
+    if 1 <= s <= 29:
+        tab = [7, 14, 20, 27, 34, 40, 43, 46, 48, 51,
+               54, 56, 59, 62, 64, 67, 70, 72, 75, 78,
+               80, 83, 85, 88, 90, 93, 95, 98, 100]
+        print(f'Ты получишь: {tab[s - 1]} баллов! \n')
+    else:
+        print('Выход из программы.')
+        exit()
+#23.06.2024 14:38 (пример)
+def f(x, y, h):
+    if (h == 3 or h == 5) and x + y >= 59:
+        return 1
+    elif h == 5 and x + y < 59:
+        return 0
+    elif x + y >= 59 and h < 5:
+        return 0
+    else:
+        if h % 2 == 0:
+            return f(x + 1, y, h + 1) or f(x, y + 1, h + 1) or f(x * 2, y, h + 1) or f(x, y * 2, h + 1)  # стратегия победителя
+        else:
+            return f(x + 1, y, h + 1) and f(x, y + 1, h + 1) and f(x * 2, y, h + 1) and f(x, y * 2, h + 1)  # стратегия проигравшего(любой ход)
+ 
+def f1(x, y, h):
+    if h == 3 and x + y >= 59:
+        return 1
+    elif h == 3 and x + y < 59:
+        return 0
+    elif x + y >= 59 and h < 3:
+        return 0
+    else:
+        if h % 2 == 0:
+            return f1(x + 1, y, h + 1) or f1(x, y + 1, h + 1) or f1(x * 2, y, h + 1) or f1(x, y * 2, h + 1)  # стратегия победителя
+        else:
+            return f1(x + 1, y, h + 1) and f1(x, y + 1, h + 1) and f1(x * 2, y, h + 1) and f1(x, y * 2, h + 1)  # стратегия проигравшего(любой ход)
+ 
+for x in range(1, 54):
+    if f(x, 5, 1) == 1:
+        print(x)
+print("====")
+for x in range(1, 54):
+    if f1(x, 5, 1) == 1:
+        print(x)
 
           
 
