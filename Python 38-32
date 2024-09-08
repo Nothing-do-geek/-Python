@@ -1695,6 +1695,147 @@ for x in range(-70,90):
           t.goto(x * scale, y * scale)
           t.dot(3, "orange")
 t.done()
+#24.06.2024 22:06 (2406202419)
+def (x,step=0):
+  if x >= 39 and step == 2:
+    return True
+  elif x < 39 and step < 2:
+    if step % 2 == 0:
+      return f(x+1,step+1) or f(x+3,step+1) or f(x*2,step+1)
+    else:
+      return f(x+1,step+1) and f(x+3,step+1) and f(x*2,step+1)
+  else:
+    return False
+
+for s in range(1,38):
+  if f(s):
+    print(s)
+    break
+#23.04.2024 18:54 (ARINA)
+used=[]
+k=0
+for x1 in 'ARINA':
+  for x2 in 'ARINA':
+    for x3 in 'ARINA':
+      for x4 in 'ARINA':
+        for x5 in 'ARINA':
+             s=x1+x2+x3+x4+x5
+             if s.count('A') == 2 \
+                and s.count('R') == 1 \
+                and s.count('I') == 1 \
+                and s.count('N') == 1 \
+                and s.count('AA') == 0 \
+                     and s not in used:
+                  k=k+1
+                  used.append(s)  
+print(k)
+#23.04.2024 19:41 (Arkadii)
+import itertools
+alphabet = "ВЕРЕТЕНО"
+ar = itertools.product(alphabet, repeat=6) #Размещение с повторением
+arl = []
+for i in ar:
+    arl.append(list(i))
+count = 0
+for e in arl:
+    if e.count("В") != 1:
+        count += 1
+print(count)
+#25.01.2024 22:45 (Calculator)
+print(60//8)
+#01.07.2024 11:16 (Fix01072024)
+"""
+k = []
+for x in '0123456789ABCDF':
+     a = int('97968' + x + '13', 15) + int('7' + x + '213', 15)
+     if a % 14 == 0:
+          k.append(a)
+     if k:
+          print(min(k) // 14)
+"""
+"""
+from sys import *
+
+setrecursionlimit (200000)
+
+def f(n):
+     if n > 100000:
+          return n
+     if n <= 100000:
+          return f(n+1) + 5*n + 2
+print(f(3)-f(7))
+"""
+"""
+def f(x,y,step=0):
+     if (x+y) >= 259 and step == 2:
+          return True
+     elif (x+y) < 259 and step < 2:
+          if step % 2 == 0:
+               return f(x+1,y,step+1) or f(x*2,y,step+1) or f(x,y+1,step+1) or f(x,y*2,step+1)
+          else:
+               return f(x+1,y,step+1) and f(x*2,y,step+1) and f(x,y+1,step+1) and f(x,y*2,step+1)
+     else:
+          return False
+for s in range(1,241):
+     if f(17,s):
+          print(s)
+          break
+"""
+"""
+def f(x,y,step=0):
+     if (x+y) >= 259 and step == 3:
+          return True
+     elif (x+y) < 259 and step < 3:
+          if step % 2 == 0:
+               return f(x+1,y,step+1) or f(x*2,y,step+1) or f(x,y+1,step+1) or f(x,y*2,step+1)
+          else:
+               return f(x+1,y,step+1) and f(x*2,y,step+1) and f(x,y+1,step+1) and f(x,y*2,step+1)
+     else:
+          return False
+for s in range(1,241):
+     if f(17,s):
+          print(s)
+"""
+"""
+def f(x,y,step=0):
+     if (x+y) >= 259 and step in {2,4}:
+          return True
+     elif (x+y) < 259 and step < 4:
+          if step % 2 != 0:
+               return f(x+1,y,step+1) or f(x*2,y,step+1) or f(x,y+1,step+1) or f(x,y*2,step+1)
+          else:
+               return f(x+1,y,step+1) and f(x*2,y,step+1) and f(x,y+1,step+1) and f(x,y*2,step+1)
+     else:
+          return False
+for s in range(1,241):
+     if f(17,s):
+          print(s)
+          break
+"""
+"""
+s = '1' * 50 + '2' * 50 + '3' * 50
+while '21' in s or '31' in s or '23' in s:
+     if '21' in s:
+          s = s.replace('21','12',1)
+     if '31' in s:
+          s = s.replace('31','13',1)
+     if '23' in s:
+          s = s.replace('23','32',1)
+print(s[9] + s[89] + s[129])
+"""
+
+
+          
+
+
+          
+ 
+
+          
+
+
+          
+ 
 
      
 
