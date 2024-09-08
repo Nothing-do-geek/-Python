@@ -1399,6 +1399,40 @@ for x in range(-50,70):
           t.goto(x * scale, y * scale)
           t.dot(3, "orange")
 t.done()
+#24.06.2024 15:55 (24062024)
+"""
+from itertools import product
+
+k = 0
+
+for i in product('0123456789aaaaa', repeat=5):
+  s = ''.join(i)
+  if s[0] != '0' and s.count('8') == 1 and s.count('a') >= 2:
+    k += 1
+print(k)
+"""
+"""
+from sys import *
+
+setrecursionlimit(2100)
+
+def f(n):
+  if n == 1:
+    return 1
+  if n > 1:
+    return (n + 1) * f(n - 1) 
+print((f(2024) - 3*f(2023))//f(2022))
+"""
+"""
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    f = ((x <= w) and ((not y) <= z)) <= ((z == x) or (w and (not y)))
+                    if f == 0:
+                         print(x,y,w,z)
+"""
 
 
      
