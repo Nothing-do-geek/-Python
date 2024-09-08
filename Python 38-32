@@ -1600,6 +1600,52 @@ for x in range(-60,90):
           t.dot(3,"orange")
 t.done()
 """
+#26.06.2024 19:02 (26062024)
+for n in range(1,1000):
+     b = bin(n) [2:]
+     if b.count('1') % 4 == 0:
+          b = '10' + b + '0'
+     else:
+          b = '11' + b + '1'
+     r = int(b,2)
+     if r < 250:
+          print(n)
+#29.06.2024 19:59 (29062024)
+"""
+def f(n):
+  divs = []
+  for i in range(1, int(n**0.5) + 1):
+    if n % i == 0:
+      if (n // i) - i < 115:
+        divs.append(n // i - i)
+  return sorted(set(divs))
+      
+for i in range(2000000, 3000000+1):
+  divs = f(i)
+  if len(divs) >= 3:
+    print(i)
+"""
+
+"""
+def f(n):
+  while n % 2 == 0:
+    n //= 2
+  divs = set()
+  for i in range(2, int(n**0.5) + 1):
+    if n % i == 0:
+      if i % 2 != 0:
+        divs.add(i)
+        divs.add(n//i)
+  return divs
+
+for i in range(45000000, 50000000+1):
+  divs = f(i)
+  if len(divs) == 5:
+    print(*sorted(divs))
+"""
+
+     
+
 
 
      
