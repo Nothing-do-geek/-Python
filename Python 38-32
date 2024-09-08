@@ -1643,6 +1643,58 @@ for i in range(45000000, 50000000+1):
   if len(divs) == 5:
     print(*sorted(divs))
 """
+#30.06.2024 19:18 (30062024)
+"""
+print('a,b,c,d')
+for a in 0,1:
+     for b in 0,1:
+          for c in 0,1:
+               for d in 0,1:
+                    f = (a <= b) and (c <= d) or (not c)
+                    if f == 0:
+                         print(a,b,c,d)
+"""
+"""
+for n in range(1,1000):
+  b = bin(n) [2:]
+  if n % 2 == 0:
+    b = '10' + b
+  else:
+    b = '1' + b + '01'
+  r = int(b,2)
+  if r > 516:
+    print(n)
+    break
+"""
+import turtle as t
+
+t.tracer(0)
+t.screensize(3500,3500,"white")
+t.left(90)
+scale = 20
+
+for k in range(2):
+     t.forward(21 * scale)
+     t.right(90)
+     t.forward(27 * scale)
+     t.right(90)
+t.up()
+t.forward(9 * scale)
+t.right(90)
+t.forward(10 * scale)
+t.left(90)
+t.down()
+for k in range(2):
+     t.forward(86 * scale)
+     t.right(90)
+     t.forward(47 * scale)
+     t.right(90)
+t.up()
+for x in range(-70,90):
+     for y in range(-70,90):
+          t.goto(x * scale, y * scale)
+          t.dot(3, "orange")
+t.done()
 
      
 
