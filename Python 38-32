@@ -1048,6 +1048,205 @@ def f(n):
           return 2 * n * f(n-1)
 print((f(2024)//16-f(2023))//f(2022))
 """
+#20.06.2024 10:07 (20062024)
+"""
+for n in range(1,1000):
+     b = bin(n) [2:]
+     if b.count('0') % 2 != 0:
+          b = '10' + b + '11'
+     else:
+          b = '1' + b + '00'
+     r = int(b,2)
+     if r > 1023:
+          print(n,r)
+          break
+"""
+"""
+a = []
+for n in range(1,1000):
+     b = bin(n) [2:]
+     if n % 2 != 0:
+          b = '1' + b + '0'
+     else:
+          b = '11' + b + '11'
+     r = int(b, 2)
+     if r < 126:
+          a.append(r)
+print(max(a))
+"""
+"""
+for n in range(1, 1000):
+     b = bin(n) [2:]
+     for k in range(3):
+          q = b.count('1') - b.count('0')
+          if (q < 0):
+               b += '1'
+          elif (q > 0):
+               b += '0'
+          else:
+               b += b[-1]
+     if n > 95 and int(b, 2) % 4 == 0:
+          print(n)
+          break
+"""
+"""
+def f(n):
+     if n < 10:
+          return n
+     if n >= 10:
+          return f(g(n))
+
+def g(n):
+     if n < 10:
+          return n
+     if n >= 10:
+          return n % 10 + g(n // 10)
+print(f(12345678987654321))
+"""
+"""
+from functools import lru_cache
+
+@lru_cache(None)
+def f(n):
+     if n <= 3:
+          return n + 3
+     if n > 3 and f(n-1) % 2 == 0:
+          return f(n-2) + n
+     if n > 3 and f(n-1) % 2 != 0:
+          return f(n-2) + 2*n
+
+k = 0
+for x in range(40,51):
+     if f(x):
+          k += f(x)
+print(k)
+"""
+"""
+def f(n):
+     if n == 0:
+          return 0
+     if n > 0 and n % 2 == 0:
+          return f(n//2) - 1
+     if n > 0 and n % 2 != 0:
+          return 2 + f(n-1)
+
+k = 0
+for x in range(1000):
+     if f(x) == 3:
+          k += 1
+print(k)
+"""
+"""
+from functools import lru_cache
+
+@lru_cache(None)
+
+def f(n):
+     if n == 1:
+          return 1
+     if n > 1:
+          return (2*n - 1) * f(n - 1)
+
+for n in range(2,5000):
+     f(n)
+     
+print(f(3516)//f(3513))
+"""
+"""
+from functools import lru_cache
+
+@lru_cache(None)
+
+def f(n):
+     if n == 1:
+          return 1
+     if n > 1:
+          return n*f(n-1) + 1
+for n in range(1,5000):
+     f(n)
+     
+print(f(3303)//f(3300))
+"""
+"""
+from functools import lru_cache
+
+@lru_cache(None)
+
+def f(n):
+     if n == 1:
+          return 1
+     if n > 1:
+          return n * f(n-1)
+
+for n in range(1,5000):
+     f(n)
+
+print(f(446)//f(443))
+"""
+"""
+from sys import *
+
+setrecursionlimit(2100)
+
+def f(n):
+     if n == 1:
+          return 1
+     if n > 1:
+          return n**2 + f(n-1)
+print(f(2023)-f(2019))
+"""
+"""
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    f = (x or y) and (not(y==z)) and (not w)
+                    if f == 1:
+                         print(x,y,w,z)
+"""
+"""
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w  in 0,1:
+               for z in 0,1:
+                    f = (not(y <=(x==w))) and (z<=x)
+                    if f == 1:
+                         print(x,y,w,z)
+"""
+"""
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    f = (not(y <= x)) or (z <= w) or (not z)
+                    if f == 0:
+                         print(x,y,w,z)
+"""
+"""
+print('x,y,w,z')
+for x in 0,1:
+     for y in 0,1:
+          for w in 0,1:
+               for z in 0,1:
+                    f = (not(x <= z)) or (y == w) or (not y)
+                    if f == 0:
+                         print(x,y,w,z)
+"""
+"""
+print('a,b,c,d')
+for a in 0,1:
+     for b in 0,1:
+          for c in 0,1:
+               for d in 0,1:
+                    f = ((not a) and (not b)) or (b ==c) or d
+                    if f == 0:
+                         print(a,b,c,d)
+"""
+
+
      
 
 
