@@ -811,6 +811,34 @@ while ('222' in s) or ('888' in s):
         s=s.replace ('888','2',1)
 print(s)
 
+#02.09.2023 16:50 (еуыетест)
+
+def F(n):
+
+  if n > 1:
+
+    return F(n-1)+ G(n-1)
+
+  else: return n+1
+
+def G(n):
+
+  if n > 1:
+
+    return G(n-1)+ F(n)
+
+  else: return n-1
+
+}
+
+#19.03.2023 23:07 (еуые2)
+x = 6*(343**5) + 5*(49**7) - 50
+s = '' 
+while x != 0:
+    s += str(x % 7)
+    x //= 7
+s = s[::-1]
+print(s.count("6"))
 
 
                          
