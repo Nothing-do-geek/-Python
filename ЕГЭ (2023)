@@ -949,7 +949,51 @@ for n in range(1,516): # появилось число 516
     if R>516: # В результате работы автомата на экране появилось число, большее 516
         print(n)
         break
+#19.03.2023 23:00 (aaa)
+n = 4**16+2**34-8;
+n=bin(n)
+print(n.count("1"))
+#11.12.2023 21:54 (unknown)
+file = open('file_2.txt')
 
+max_len = -100500
+
+for line in file:
+    line = line.strip()
+    if (len(line)) > max_len:
+        max_len = len(line)
+
+print(max_len)
+
+file.close()
+#01.04.2023 16:53 (tu'5)
+for n in range(10,1200):
+  s = str(n)
+  s1 = int(s[0]) * int(s[1]) * int(s[2])
+  s2 = int(s[0]) + int(s[1]) + int(s[2])
+  
+  mas = [s1,s2]
+  mas.sort()
+  
+  R = str(mas[1]) + str(mas[0])
+  if R == "33621":
+    print(n)
+    break
+#19.03.2023 23:05 (training)
+n = 4**16 + 2**36 - 8
+n = bin(n)
+print(n.count("1"))
+#06.08.2023 11:33 (testfromVK)
+def func(x, l=None):
+    if l is None:
+        l = []
+    l.append(x)
+    return l
+
+print(func(1), end=" ")
+print(func(2), end=" ")
+print(func(3,[0]), end=" ")
+print(func(4))
 
 
         
