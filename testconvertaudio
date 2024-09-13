@@ -1,0 +1,7 @@
+#21.12.2023 16:00 
+from pydub import AudioSegment
+AudioSegment.converter = "...First own sound effect.wav"
+
+wav = AudioSegment.from_wav(Path)
+wav.export(r"First own sound effect.mp3",format="mp3")
+
