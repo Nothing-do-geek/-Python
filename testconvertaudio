@@ -5,3 +5,4 @@ AudioSegment.converter = "...First own sound effect.wav"
 wav = AudioSegment.from_wav(Path)
 wav.export(r"First own sound effect.mp3",format="mp3")
 
+#Source material: https://pydocs.ru/pydub/
