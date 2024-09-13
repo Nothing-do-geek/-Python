@@ -20,3 +20,4 @@ print('RUN!')
 print('Game over', score)
 
 #Source material: Programming in Python for children by Carol Vorderman
+#Made in 2018
