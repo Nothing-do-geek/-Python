@@ -994,7 +994,16 @@ print(func(1), end=" ")
 print(func(2), end=" ")
 print(func(3,[0]), end=" ")
 print(func(4))
-
+#12.09.2023 22:49 (test143)
+for x in '0123456789ABCDEFGHIJKLM':
+    a = int(f'7{x}38596',23) + int(f'14{x}36',23) + int(f'61{x}7',23)
+    if a % 22==0:
+        print(a//22)
+#12.09.2023 23:00 (test142)
+for x in '0123456789ABCDEFGHI':
+          a = int(f'98897{x}21',19)+int(f'2{x}923',19)
+          if a % 18==0:
+                    print(a//18)
 
         
         
