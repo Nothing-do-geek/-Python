@@ -1,0 +1,66 @@
+#25.10.2022 21:21 (ex1)
+n = int(input())
+if n % 5 == 0:
+    print(n // 5)
+else:
+    n = n // 5 + 1
+    print(n)
+#25.10.2022 21:29 (ex2)
+n = int(input())
+m = int(input())
+p = (lambda a, b: ((a // b) * a + (b // a) * b) // (a // b + b // a))(n, m)
+q = p  - (n + m - p - 1)// 2 * 2
+r = 2 - (n + m - p) % 2
+print(q*r)
+#25.10.2022 20:56 (ex3)
+n = int(input())
+m = int(input())
+if n > m:
+   n = m
+L = 0
+R = n + 2
+while R - L > 1:
+   mid = (L + R) // 2
+   if (mid + n) * (n - mid + 1) // 2 >= m:
+      L = mid
+   else:
+      R = mid
+if (L + n) * (n - L + 1) // 2 < m:
+   print(0)
+else:
+   for i in range(R, n + 1):
+      print(i)
+   s = (R + n) * (n - R + 1) // 2
+   if m - s > 0:
+      print(m - s)
+#25.10.2022 21:16 (ex4)
+n, m = [int(input()) for h in range(2)]
+ans = 0
+while n >= 4 and m >= 4:
+    k = min(n, m)// 4
+    ans += ((n + m) + (n + m) - 4 * (k - 1)) * k // 2
+    n, m = n - 2 * k, m - 2 * k
+if n == 3 and m >= 3:
+    ans += 2 * m + 1
+elif n == 2 and m >= 1:
+    ans += m + 1 + int(m >= 3)
+elif m == 3 and n >= 3:
+    ans += 2 * n + 1
+elif m == 2 and n >= 2:
+    ans += n + 1
+else:
+    ans += n * m
+print(ans) 
+#25.10.2022 21:41 (ex5)
+n = [int(input()) for h in range(2)]
+y1 = int(input())
+y2 = int(input())
+y3 = int(input())
+y4 = int(input())
+x1 = int(input())
+x2 = int(input())
+x3 = int(input())
+x4 = int(input())
+while n >= 1 and n <= 10:
+    . = 1
+  
