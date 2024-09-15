@@ -1163,7 +1163,38 @@ for s in "123456":
                                 if ('00' not in num) and ('11' not in num):
                                     counter += 1
 print(counter)
-     
+#05.03.2024 18:49 (6 New Type)
+from turtle import *
+tracer(0)
+left(90)
+k = 40
+for i in range(7):
+     forward(10*k)
+     right(120)
+pu()
+for x in range(-k,k):
+     for y in range(-k,k):
+          goto(x*k,y*k)
+          dot(5)
+done()
+#08.04.2024 15:54 (6 домашка)
+for x in '0123456789ABCD':
+    t = int('115' + x + '1', 18) + int('8' + x + '331', 18)
+    if t % 8 == 0:
+        print(t)
+        exit
+#09.12.2023 17:35 (6)
+def f (c,e):
+    if c > e:
+        return 0
+    if c == e:
+        return 1
+    if c % 2:
+        return (f(c + 3, e) + f(c + 4, e) + f(c + 2, e))
+    return (f(c + 3, e) + f(c + 4, e) + f(c + 2, e))
+print(f(6,32)*f(32,35)*f(35,44))
+
+
      
 
         
