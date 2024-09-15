@@ -1,0 +1,14 @@
+#25EGE
+#24.08.2023 11:36
+def chdel(k):
+    n = 1
+    r = []
+    while n <= k:
+        if k % n == 0:
+            r.append(n)
+        n = n + 1
+    return r
+
+for i in range(126849, 126871+1):
+    if len(chdel(i))==4:
+        print(chdel(i),i)
