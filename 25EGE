@@ -12,3 +12,63 @@ def chdel(k):
 for i in range(126849, 126871+1):
     if len(chdel(i))==4:
         print(chdel(i),i)
+#25EGE2
+#24.08.2023 11:50
+def chdel(k):
+    n = 1
+    r =[]
+    while n <= k:
+        if k % n == 0:
+            r.append(n)
+        n = n + 1
+    return r
+
+for i in range (102714, 102725+1):
+    if len(chdel(i))==4:
+        print(chdel(i),i)
+#25EGE3
+#24.08.2023 12:01
+def chdel (k):
+    n = 1
+    r = []
+    while n <= k:
+        if k % n == 0:
+            r.append(n)
+        n = n + 1
+    return r
+
+for i in range(154026, 154043+1):
+    if len(chdel(i))==4:
+        print(chdel(i),i)
+#25EGE4
+#24.08.2023 12:04
+def chdel (k):
+    n = 1
+    r = []
+    while n <= k:
+        if k % n == 0:
+            r.append(n)
+        n = n + 1
+    return r
+
+for i in range (209834, 209857+1):
+    if len(chdel(i))== 4:
+        print(chdel(i),i)
+#25EGE5
+#24.08.2023 12:07
+def chdel (k):
+    n = 1
+    r = []
+    while n <= k:
+        if k % n == 0:
+            r.append(n)
+        n = n + 1
+    return r
+
+for i in range(150750, 150764+1):
+    if len(chdel(i))==4:
+        print(chdel(i),i)
+
+
+        
+
