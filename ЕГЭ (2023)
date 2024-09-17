@@ -1418,6 +1418,30 @@ def f(x,a):
 for a in range(1,100):
     if all(f(x,a)== 1 for x in range(1,1000)):
         print(a)
+#31.03.2023 0:49 (EGE 51)  
+for n in range(10,1200):
+    s = str(n)
+
+    mas = []
+    for i in range(len(s)-1):
+        mas.append(int(s[i]+s[i+1]))
+            
+    R = max(mas) + min(mas)
+    
+    if R==137:
+        print(n)
+        break
+#13.11.2022 22:51 (56 D)  
+a = int(input())
+b = int(input())
+c = int(input())
+print(a, b, c)
+
+
+
+
+
+
         
 
      
