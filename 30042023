@@ -1,0 +1,44 @@
+#17:16
+s = '6' * 282
+while '222' in s or '6666' in s:
+    if '222' in s:
+        s = s.replace ('222','6',1)
+    else:
+        s = s.replace ('6666','2',1)
+print(s)
+#17:20 (3)
+def f(x, y):
+    if x == y:
+        return 1
+    if x > y or x == 10 or x == 11:
+        return 0
+    else:
+        return f(x + 1, y) + f(x + 2, y) + f(x * 3, y)
+print(f(1, 8) * f(8, 28))
+#21:50 (215)
+def f (x,y):
+    if x == y:
+        return 1
+    if x > y or x == 21:
+        return 0
+    else:
+        return f(x + 1,y) + f(x * 3,y) + f(x * 4,y)
+print(f(2,16) * f(16,60))
+#23:05 (2305)        
+def f(x, y):
+    if x > y:
+        return 0
+    if x == y:
+        return 1
+    else:
+        return f(x + 1, y) + f(x + 3, y) + f(x * 3, y)
+print(f(1, 15))
+#23:08 (2308)   
+def f(x,y):
+    if x == y:
+        return 1
+    if x > y or x == 10:
+        return 0
+    else:
+        return f(x + 1,y) + f(x + 2,y) + f(x * 2,y)
+print(f(2,12))
