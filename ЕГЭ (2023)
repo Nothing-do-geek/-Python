@@ -1467,6 +1467,104 @@ for x in range (0,2):
             for w in range (0,2):
                 if ((not x and not y) or (y == z) or not w) ==0:
                     print(x, y, z, w)
+#17.04.2023 22:00 (ege7)  
+from itertools import product
+for i, w in enumerate(product('АПРСУ', repeat=4), start=1):
+    if w[0] == 'У':
+        print(i)
+        break
+#28.09.2023 22:29 (EGE8)  
+alph = 'compiuter'
+alph1 = 'ccomputer'
+
+counter = 0
+
+for s in alph1:
+          for s1 in alph:
+                    for s2 in alph:
+                              for s3 in alph:
+                                        for s4 in alph:
+                                                  for s5 in alph:
+                                                       for s6 in alph:
+                                                            for s7 in alph:
+                                                                 for s8 in alph:
+                                                                      word = s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8
+                                                                      counter += 1
+                                                                      print(word)
+
+print()
+print(counter)
+#19.03.2023 23:20 (EGE12(1))  
+s = '1' + '9' * 98
+while '19' in s or '299' in s or '3999'in s:
+    s = s.replace('19','2',1)
+    s = s.replace('299','3',1)
+    s = s.replace('3999','1',1)
+print(s)
+#19.03.2023 23:26 (EGE12(2)) 
+s = '69' * 8
+while '3333' in s or '8888' in s:
+    if '3333' in s:
+        s = s.replace('3333','88',1)
+    else:
+        s = s.replace('8888','33',1)
+print(s)
+#30.08.2023 16:31 (EGE12(2023)) 
+for i in range(60,1000):
+    s = '1' * i
+    while '111' in s:
+        s = s.replace('111','2',1)
+        s = s.replace('222','11',1)
+    if s == '2211':
+        print (s,i)
+        break
+#30.08.2023 16:47 (EGE12(2023NEW)) 
+for i1 in range(1, 24):
+    for i2 in range(1, 42):
+        for i3 in range(1, 24):
+            s = '0' + '1' * i1 +'2'*i2 + '3'*i3 + '0'
+            while '00' not in s:
+                s = s.replace('01', '210', 1)
+                s = s.replace('02', '320', 1)
+                s = s.replace('03', '3012', 1)
+            if s.count('1') == 23 and s.count('2') == 48 and s.count('3') == 41:
+                print(2+i1+i2+i3)
+#30.08.2023 16:35 (EGE12(20231)) 
+for i in range(60,1000):
+    s = '1' * i
+    while '111' in s:
+        s = s.replace ('111','2',1)
+        s = s.replace ('222','11',1)
+    if s == '221':
+        print (s,i)
+        break
+#19.03.2023 23:12 (EGE12) 
+s = '3' * 68
+while '999' in s or '333' in s:
+    if '333' in s:
+        s = s.replace('333', '9',1)
+    else:
+        s = s.replace('999', '3',1)
+print(s)
+#01.09.2023 23:54 (EGE13NEW) 
+def ip2bin (sIp):
+    a = int[int(o) for o in sIp.split('.')]
+    n = a[0]*256**3 + a[1]*256**2 + a[2]*256 + a[3]
+    return f'{n:b}'
+mask = ip2bin('255.255.255.240')
+zeroBits = mask.count('0')
+print(2**zeroBits//2)
+#08.03.2023 23:39 (EGE15.1) 
+for a in range(100, 0,-1):
+    k = 0
+    for x in range(1, 1000):
+        if (70 % a == 0) and ((x % 28 == 0) <= ((x % a != 0) <= (x % 21 != 0))):
+            k += 1
+    if k == 999:
+        print(a)
+        break
+
+          
 
                 
 
