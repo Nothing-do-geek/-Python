@@ -1431,11 +1431,8 @@ for n in range(10,1200):
     if R==137:
         print(n)
         break
-#13.11.2022 22:51 (56 D)  
-a = int(input())
-b = int(input())
-c = int(input())
-print(a, b, c)
+
+
 
 
 
