@@ -1431,7 +1431,44 @@ for n in range(10,1200):
     if R==137:
         print(n)
         break
+#19.03.2023 23:13 (2323)  
+s = '9' * 65
+while '999' in s or '222' in s:
+    if '222' in s:
+        s = s.replace('222', '9')
+    else:
+        s = s.replace('999', '2')
+print(s)
+#15.06.2023 23:23 (7842)  
+for n in range(3):
+    s = '3'+n*'5'
+    while '25' in s or '355' in s or '555' in s:
+        if '25' in s:
+            s = s.replace('25','32',1)
+        elif '355' in s:
+            s = s.replace('335','25',1)
+        elif '555' in s:
+            s = s.replace('555','3',1)
+    if s.count('2')==5:
+        print(n,s.count('2'),s)
+#08.03.2023 23:49 (EGE 2.1)  
+print ('x y z w')
+for x in range (0,2):
+    for y in range (0,2):
+        for z in range (0,2):
+            for w in range (0,2):
+                if ((not (x) or not (y)) and not(x == z) and  w) ==1:
+                    print(x, y, z, w)
+#08.03.2023 23:47 (EGE 2)  
+print ('x y z w')
+for x in range (0,2):
+    for y in range (0,2):
+        for z in range (0,2):
+            for w in range (0,2):
+                if ((not x and not y) or (y == z) or not w) ==0:
+                    print(x, y, z, w)
 
+                
 
 
 
