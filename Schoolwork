@@ -312,5 +312,15 @@ while n != 1:
 print(a+4)
 #22.12.2022 23:34 (58Y)
 print(*[n for n in input()])
+#13.11.2022 22:15 (A56)
+a = int(input())
+b = int(input())
+c = int(input())
+d = a + b + c
+e = a * b * c
+f = (a + b + c)/3
+print(a, "+", b, "+", c, "=", d)
+print(a, "*", b, "*", c, "=", e)
+print( (a,"+", b,"+", c ), "/", "3", "=", f)
 
     
